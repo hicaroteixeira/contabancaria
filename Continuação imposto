@@ -1,0 +1,16 @@
+package ContaBancaria;
+
+public class Testarempregado {
+
+	public static void main(String[] args) {
+		
+		Empregado e = new Empregado();
+		e.nome="Hicaro";
+		e.matricula=1232;
+		e.salariobruto=1500;
+		e.calcularInss();
+		e.imprimirDados();
+
+	}
+
+}
