@@ -1,0 +1,59 @@
+package ContaBancaria;
+
+public class Testerconta {
+	
+		
+		public static void main(String[] args) {
+			Conta c1 = new Conta();
+			c1.cliente="Hicaro";
+			c1.saldo=1000.00;
+			c1.numConta="2022205";
+			c1.depositar(500.00);;
+			c1.sacar(250);
+			c1.imprimirDados();
+			
+			
+			Conta c2 = new Conta();
+			c2.cliente="Rosa";
+			c2.saldo=1000.00;
+			c2.numConta="2022205";
+			c2.depositar(500.00);;
+			c2.sacar(250);
+			c2.imprimirDados();
+			
+			
+			Conta c3 = new Conta();
+			c3.cliente="Joseneuza";
+			c3.saldo=1000.00;
+			c3.numConta="2022205";
+			c3.depositar(500.00);;
+			c3.sacar(250);
+			c3.imprimirDados();
+			
+			Conta c4 = new Conta();
+			c3.cliente="Samuel";
+			c3.saldo=10.00;
+			c3.numConta="2022205";
+			c3.depositar(500.00);;
+			c3.sacar(250);
+			c3.imprimirDados();
+			
+			//Declarar um vetor de contas
+			
+			Conta banco[] = new Conta [4];
+			banco[0]=c1;
+			banco[1]=c2;
+			banco[2]=c3;
+			banco[3]=c4;
+			
+			// Criar um lopping para depositar 50 reais em todas as contas
+			
+			for (int i =0; i<banco.length; i++) {
+				banco[i].depositar(50.00);
+				banco[i].imprimirDados(); 
+				
+			}
+			
+			
+		}
+	}
