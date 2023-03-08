@@ -1,0 +1,46 @@
+package ContaBancaria;
+
+import java.util.Scanner;
+
+public class Empregado {
+
+	int matricula;
+	String nome;
+	double salariobruto;
+	double inss;
+	double impostoRenda;
+	double salarioliquido;
+
+	public void imprimirDados() {
+
+		System.out.print("Matricula...: " + matricula + "\n" + 
+		                 "Nome........: " + nome + "\n" + 
+				         "Salário Bruto: "+ salariobruto + "\n" + 
+		                 "INSS........:  " + inss + "\n" + 
+				         "Imposto de Renda.." + impostoRenda + "\n"				+ 
+		                 "Total de Descontos: " + (inss + impostoRenda) + "\n" + 
+				         "Salário Líquido...: " + salarioliquido	+ "\n");
+
+	}
+
+	public void calcularInss() {
+		if (salariobruto < 1302.00) {
+			inss = salariobruto * 0.075;
+
+		} else if (salariobruto <= 2571.79) {
+			inss = salariobruto * 0.09;
+
+		} else if(salariobruto<=3856.94) {
+			inss = salariobruto * 0.12;
+
+		} else if(salariobruto<=7507.49){
+			inss = salariobruto * 0.14;
+	   } else {
+			
+			inss = 7507.49 * 0.14;
+		}
+}
+	
+	
+
+}
